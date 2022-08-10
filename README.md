@@ -8,4 +8,4 @@ In order to be used it needs to be:
 - TESTED
 `npm test`
 - DEPLOYED (Dockerhub)
-`docker build -t expressApp .`
+`docker build -t expressApp .`# CI-Demo-Demo
