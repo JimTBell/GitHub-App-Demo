@@ -4,11 +4,7 @@
 
 # Name of the workflow
 name: Git Basic Express Actions
-
-# Global environments
-env:
-  NAME: Jim
-  
+ 
 # What triggers this workflow run
 on: [push]
      
@@ -31,21 +27,10 @@ jobs:
     - name: Test the Node Express website
       run: npm test 
 
+    - name: Deployed (Dockerhub)
+      run: docker build -t expressApp . 
+
     - run: ls
-    
- #build_job:
- #   runs-on: ubuntu-latest
- #   steps:
- #   - name: Check out repo
- #     uses: actions/checkout@v3
- #     
- #   # Display the global enviroment variable 
- #   - run: echo "My name is $NAME"
- #   
- #   # Run the buildScript.sh file
- #   - name: Change the execute permission on the script file so everyone can execute it
- #     run: chmod +x buildScript.sh
- #   - name: Run the buid script
- #     run: ./buildScript.sh $NAME
+ 
       
     
