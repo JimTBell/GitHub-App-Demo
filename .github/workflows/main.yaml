@@ -28,7 +28,7 @@ jobs:
       run: npm test 
 
     - name: Deployed (Dockerhub)
-      run: docker build -t expressApp . 
+      run: docker build -t express/app . 
 
     - run: ls
  
